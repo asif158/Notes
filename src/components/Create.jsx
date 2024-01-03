@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { addNote } from './Reducer'
+import { addNote } from '../Reducer'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
