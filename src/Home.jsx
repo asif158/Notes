@@ -7,6 +7,7 @@ import { FaPen, FaEye } from 'react-icons/fa'
 function Home() {
   const dispatch = useDispatch()
   const notes = useSelector((state) => state.notes)
+  // console.log(notes)
 
   const handleDelete = (id) => {
     dispatch(deleteNote({ id: id }))
@@ -30,7 +31,7 @@ function Home() {
                 <th className="py-2 px-4 border-b">ID</th>
                 <th className="py-2 px-4 border-b">Title</th>
                 <th className="py-2 px-4 border-b">Body</th>
-                <th className="py-2 px-4 border-b">Action</th>
+                <th className="py-2 px-4 border-b">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -41,7 +42,7 @@ function Home() {
                 >
                   <td className="py-2 px-4 border-b text-center">{note?.id}</td>
                   <td className="py-2 px-4 border-b text-center">
-                    {note?.title}
+                    {note?.title.slice(0, 10)}
                   </td>
                   <td className="py-2 px-4 border-b text-center">
                     {`${note?.body.slice(0, 20)}...`}
