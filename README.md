@@ -1,8 +1,50 @@
-# React + Vite
+# Notepad+
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Notepad+ is a simple note-taking application built with React and Redux.
 
-Currently, two official plugins are available:
+## Live Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://cerulean-lokum-72b3af.netlify.app/
+
+## Features
+
+- Create, view, edit, and delete notes.
+- Responsive design for both desktop and mobile devices.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/asif158/Notes.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Notes
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Usage
+
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+2. Open your browser following the link in the terminal.
+
+enjoy this simple app.
