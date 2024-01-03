@@ -19,12 +19,13 @@ const noteSlice = createSlice({
     },
     updateNote: (state, action) => {
       const { id, title, body } = action.payload
-      const updatedNote = state.find((note) => note.id === id)
+      // var updatedNote = [...state]
+      const finalNote = state.find((note) => note.id === id)
 
-      if (updatedNote) {
-        updatedNote.title = title
-        updateNote.body = body
-        return updatedNote
+      if (finalNote) {
+        finalNote.title = title
+        finalNote.body = body
+        return finalNote
         // return (temp[updatedNote] = { id, title, body })
         // state[updatedNoteIndex] = { ...state[updatedNoteIndex], title, body }
         // localStorage.setItem('notes', JSON.stringify(state));

@@ -2,6 +2,7 @@
 import Home from './Home'
 import Create from './Create'
 import Update from './Update'
+import View from './View'
 //redux react-router-dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { configureStore } from '@reduxjs/toolkit'
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/view/:id" element={<View />} />
           <Route path="/edit/:id" element={<Update />} />
         </Routes>
       </BrowserRouter>

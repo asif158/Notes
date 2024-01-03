@@ -11,7 +11,7 @@ export const storedNotes = [
   },
   {
     id: 3,
-    title: 'zakir',
-    body: 'zakir@hlksjfl',
+    title: 'Home Work',
+    body: 'complete 30 questions in maths, linear algebra',
   },
 ]

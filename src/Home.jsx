@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { deleteNote } from './Reducer'
+import { MdDelete } from 'react-icons/md'
+import { FaPen, FaEye } from 'react-icons/fa'
 
 function Home() {
   const dispatch = useDispatch()
@@ -44,18 +46,24 @@ function Home() {
                   <td className="py-2 px-4 border-b text-center">
                     {`${note?.body.slice(0, 20)}...`}
                   </td>
-                  <td className="py-2 px-4 border-b text-center">
+                  <td className="py-2 px-4 border-b text-center flex justify-around items-center">
+                    <Link
+                      to={`/view/${note.id}`}
+                      className="bg-green-500 text-white font-bold py-1 px-2 rounded-full mr-2"
+                    >
+                      <FaEye />
+                    </Link>
                     <Link
                       to={`/edit/${note.id}`}
                       className="bg-blue-500 text-white font-bold py-1 px-2 rounded-full mr-2"
                     >
-                      Edit
+                      <FaPen />
                     </Link>
                     <Link
                       onClick={() => handleDelete(note.id)}
                       className="bg-red-500 text-white font-bold py-1 px-2 rounded-full"
                     >
-                      Delete
+                      <MdDelete />
                     </Link>
                   </td>
                 </tr>
