@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { storedNotes } from './Data'
 
-// const storedUsers = JSON.parse(localStorage.getItem('notes')) || []
+// const storednotes = JSON.parse(localStorage.getItem('notes')) || []
 
-const userSlice = createSlice({
+const noteSlice = createSlice({
   name: 'notes',
   initialState: storedNotes,
   reducers: {
@@ -19,19 +19,20 @@ const userSlice = createSlice({
     },
     updateNote: (state, action) => {
       const { id, title, body } = action.payload
-      const updatedUser = state.find((user) => user.id === id)
+      const updatedNote = state.find((note) => note.id === id)
 
-      if (updatedUser) {
-        updatedUser.title = title
+      if (updatedNote) {
+        updatedNote.title = title
         updateNote.body = body
-        // return (temp[updatedUser] = { id, title, body })
-        // state[updatedUserIndex] = { ...state[updatedUserIndex], title, body }
+        return updatedNote
+        // return (temp[updatedNote] = { id, title, body })
+        // state[updatedNoteIndex] = { ...state[updatedNoteIndex], title, body }
         // localStorage.setItem('notes', JSON.stringify(state));
       }
     },
     deleteNote: (state, action) => {
       const { id } = action.payload
-      const indexToDelete = state.findIndex((user) => user.id === id)
+      const indexToDelete = state.findIndex((note) => note.id === id)
       if (indexToDelete !== -1) {
         state.splice(indexToDelete, 1)
       }
@@ -43,5 +44,5 @@ const userSlice = createSlice({
   },
 })
 
-export const { addNote, updateNote, deleteNote } = userSlice.actions
-export default userSlice.reducer
+export const { addNote, updateNote, deleteNote } = noteSlice.actions
+export default noteSlice.reducer
